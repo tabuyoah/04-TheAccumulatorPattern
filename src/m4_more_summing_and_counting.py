@@ -194,7 +194,7 @@ def factorial(n):
         factorial(0) returns 1 (by definition).
     """
     # -------------------------------------------------------------------------
-    # TODO: 5. Implement and test this function.
+    # DONE: 5. Implement and test this function.
     #   Note that you should write its TEST function first (above).
     #
     # IMPORTANT:  Your solution MUST
@@ -208,7 +208,7 @@ def factorial(n):
 def run_test_count_cosines_from():
     """ Tests the   count_cosines_from   function. """
     # -------------------------------------------------------------------------
-    # TODO: 6. Implement this TEST function.
+    # DONE: 6. Implement this TEST function.
     #   It TESTS the  count_cosines_from  function defined below.
     #   Include at least **   6   ** tests (we wrote one for you).
     #              ** Yes, 6 (six) tests. **
@@ -249,7 +249,7 @@ def run_test_count_cosines_from():
 
     # Test 2:
     answer_from_oracle = 2
-    answer_from_my_code = count_cosines_from(1,3,0.29)
+    answer_from_my_code = count_cosines_from(1,9,0.5)
     print('Test 2 expected (from oracle):', answer_from_oracle)
     print('       actual (from my code): ', answer_from_my_code)
 
@@ -266,14 +266,14 @@ def run_test_count_cosines_from():
     print('       actual (from my code): ', answer_from_my_code)
 
     # Test 5:
-    answer_from_oracle = math.factorial(8)
+    answer_from_oracle = 0
     answer_from_my_code = count_cosines_from(8,10,0.2)
     print('Test 5 expected (from oracle):', answer_from_oracle)
     print('       actual (from my code): ', answer_from_my_code)
 
     # Test 6:
-    answer_from_oracle = math.factorial(15)
-    answer_from_my_code = count_cosines_from(15,16,0.1)
+    answer_from_oracle = 3
+    answer_from_my_code = count_cosines_from(15,20,0.1)
     print('Test 6 expected (from oracle):', answer_from_oracle)
     print('       actual (from my code): ', answer_from_my_code)
 
@@ -297,7 +297,7 @@ def count_cosines_from(m, n, x):
       -- count_cosines_from(4, 8, -0.5)  returns  4
     """
     # -------------------------------------------------------------------------
-    # TODO: 7. Implement and test this function.
+    # DONE: 7. Implement and test this function.
     #   Note that you should write its TEST function first (above).
     #
     # IMPORTANT: As in previous problems in this session,
@@ -307,10 +307,8 @@ def count_cosines_from(m, n, x):
     total = 0
     for k in range(n - m + 1):
         cosine = math.cos(m + k)
-        print(cosine)
-        print(m + k + 1)
         if cosine > x:
-            total = total + cosine
+            total = total + 1
     return total
 
 
